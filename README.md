@@ -18,8 +18,33 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 books
 
 # PROGRAM
+```
+models.py
+from django.db import models
+from django.contrib import admin
+
+class Car(models.Model):
+    car_name=models.CharField(max_length=100)
+    brand=models.CharField(max_length=100)
+    model=models.CharField(max_length=50)
+    year=models.IntegerField()
+    
+class CarAdmin(admin.ModelAdmin):
+    list_display=('car_name','brand','model','year')
+
+admin.py
+from django.contrib import admin
+from .models import Car,CarAdmin
+admin.site.register(Car,CarAdmin)
+
+```
 # OUTPUT
-Include the screenshot of your admin page.
+ 
+![alt text](<Screenshot 2025-09-21 182003.png>)
+
+![alt text](<Screenshot 2025-09-21 182956.png>)
+
+
 
 # RESULT
 Thus the program for creating a database using ORM hass been executed successfully
