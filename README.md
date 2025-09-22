@@ -1,5 +1,6 @@
 # Ex02 Django ORM Web Application
-# Date:
+# Date:22.09.2025
+
 # AIM
 To develop a Django application to store and retrieve data from a bank loan database using Object Relational Mapping(ORM).
 
@@ -19,7 +20,8 @@ Execute Django admin and create details for 10 books
 
 # PROGRAM
 ```
-models.py
+models.py:
+
 from django.db import models
 from django.contrib import admin
 
@@ -32,7 +34,8 @@ class Car(models.Model):
 class CarAdmin(admin.ModelAdmin):
     list_display=('car_name','brand','model','year')
 
-admin.py
+admin.py:
+
 from django.contrib import admin
 from .models import Car,CarAdmin
 admin.site.register(Car,CarAdmin)
